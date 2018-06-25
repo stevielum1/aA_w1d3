@@ -163,7 +163,6 @@ def make_better_change(total, coins)
   best_combo = []
 
   coins.each do |coin|
-    debugger
     combinations = []
     lower_coins = coins.select{|c| c <= coin}
     combinations << [coin] + make_better_change(total - coin, lower_coins)
